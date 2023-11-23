@@ -23,6 +23,7 @@ This repository comprises distinct branches, each serving a specific purpose. Be
 
 ## TODOs
 - [ ] Update README.md for all branches
+- [ ] Add Loading Component for Suspense fallback
 - [ ] Develop exclusive CLI to work with this kit
 - [ ] Develop Home Page
 - [ ] Add more features!
