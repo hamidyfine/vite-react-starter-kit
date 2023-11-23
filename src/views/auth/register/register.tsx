@@ -5,9 +5,9 @@ import { DateInput } from '@mantine/dates';
 import { useFormik } from 'formik';
 import { Link } from 'react-router-dom';
 
-import { FieldIcon, Trans } from '../../components';
-import { project } from '../../configs';
-import { useTrans } from '../../hooks';
+import { FieldIcon, Trans } from '../../../components';
+import { project } from '../../../configs';
+import { useTrans } from '../../../hooks';
 
 interface IFormData {
     first_name: string;

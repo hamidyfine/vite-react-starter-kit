@@ -20,15 +20,15 @@ export const routes: RouteObject[] = [
                 children: [
                     {
                         path: route.auth.login,
-                        element: createElement(lazy(() => import(/*webpackChunkName: "login" */ '../views/login'))),
+                        element: createElement(lazy(() => import(/*webpackChunkName: "login" */ '../views/auth/login'))),
                     },
                     {
                         path: route.auth.register,
-                        element: createElement(lazy(() => import(/*webpackChunkName: "register" */ '../views/register'))),
+                        element: createElement(lazy(() => import(/*webpackChunkName: "register" */ '../views/auth/register'))),
                     },
                     {
                         path: route.auth.forget,
-                        element: createElement(lazy(() => import(/*webpackChunkName: "forget-password" */ '../views/forget-password'))),
+                        element: createElement(lazy(() => import(/*webpackChunkName: "forget-password" */ '../views/auth/forget-password'))),
                     },
                 ],
             },
@@ -38,7 +38,7 @@ export const routes: RouteObject[] = [
                 children: [
                     {
                         path: route.dashboard.home,
-                        element: createElement(lazy(() => import(/*webpackChunkName: "dashboard" */ '../views/dashboard'))),
+                        element: createElement(lazy(() => import(/*webpackChunkName: "dashboard" */ '../views/dashboard/home'))),
                     },
                 ],
             },

@@ -3,9 +3,9 @@ import { useFormik } from 'formik';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { FieldIcon, Trans } from '../../components';
-import { project } from '../../configs';
-import { useTrans } from '../../hooks';
+import { FieldIcon, Trans } from '../../../components';
+import { project } from '../../../configs';
+import { useTrans } from '../../../hooks';
 
 interface IFormEmail {
     email: string;

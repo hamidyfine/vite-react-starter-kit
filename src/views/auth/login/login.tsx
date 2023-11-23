@@ -2,9 +2,9 @@ import { Button, Checkbox, Group, Paper, PasswordInput, Stack, Text, TextInput, 
 import { useFormik } from 'formik';
 import { Link } from 'react-router-dom';
 
-import { FieldIcon, Trans } from '../../components';
-import { project } from '../../configs';
-import { useTrans } from '../../hooks';
+import { FieldIcon, Trans } from '../../../components';
+import { project } from '../../../configs';
+import { useTrans } from '../../../hooks';
 
 interface IFormData {
     email: string;
