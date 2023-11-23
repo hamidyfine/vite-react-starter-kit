@@ -2,5 +2,27 @@
     "hello-world": "Hello World!",
     "page": {
         "home": "home"
+    },
+    "auth": {
+        "login": {
+            "title": "Welcome Back!",
+            "forget_password": "Forget Password?",
+            "don_t_have_account": "Do not have an account yet?",
+            "create_account": "Create account"
+        }
+    },
+    "button": {
+        "login": "Sign In",
+        "register": "Sign Up",
+        "logout": "Sign Out"
+    },
+    "field": {
+        "email": "Email",
+        "password": "Password",
+        "remember": "Remember Me"
+    },
+    "placeholder": {
+        "email": "Enter your email address",
+        "password": "Enter your password"
     }
 }
