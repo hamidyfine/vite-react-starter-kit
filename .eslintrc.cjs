@@ -113,7 +113,7 @@ module.exports = {
         'react/jsx-first-prop-new-line': ['error', 'multiline'],
         'react/jsx-fragments': 'error',
         'react/jsx-key': ['error', { checkFragmentShorthand: true, checkKeyMustBeforeSpread: true, warnOnDuplicates: true }],
-        'react/jsx-max-depth': ['error', { max: 5 }],
+        'react/jsx-max-depth': ['error', { max: 8 }],
         'react/jsx-max-props-per-line': ['error', { 'maximum': 1, 'when': 'always' }],
         'react/jsx-no-leaked-render': ['off', { validStrategies: ['ternary', ''] }],
         'react/jsx-no-script-url': 'error',

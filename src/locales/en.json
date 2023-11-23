@@ -8,7 +8,12 @@
             "title": "Welcome Back!",
             "forget_password": "Forget Password?",
             "don_t_have_account": "Do not have an account yet?",
-            "create_account": "Create account"
+            "create_account": "Create account."
+        },
+        "register": {
+            "title": "Start Listing your Movies!",
+            "have_account": "Do you have an account?",
+            "login_to_account": "Sign in to your account."
         }
     },
     "button": {
@@ -19,10 +24,15 @@
     "field": {
         "email": "Email",
         "password": "Password",
-        "remember": "Remember Me"
+        "remember": "Remember Me",
+        "first_name": "First Name",
+        "last_name": "Last Name",
+        "dob": "Date of Birth",
+        "gender": "Gender"
     },
     "placeholder": {
-        "email": "Enter your email address",
-        "password": "Enter your password"
+        "email": "example@domain.com",
+        "password": "Use safe one :)",
+        "dob": "YYYY/MM/DD"
     }
 }

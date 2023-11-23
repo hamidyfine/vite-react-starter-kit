@@ -9,7 +9,7 @@ This repository comprises distinct branches, each serving a specific purpose. Be
 
 **folder-tree:** An extension of the lite branch, this variant adheres to best-practice folder structures.
 
-**main:** Positioned as a minimal starter kit, this branch encompasses the elements of the lite branch and integrates the restructured folder-tree branch. Additionally, it incorporates a router. Ideal for those seeking a streamlined starter kit with optimal folder structure and routing functionality.
+**minimal:** Positioned as a minimal starter kit, this branch encompasses the elements of the lite branch and integrates the restructured folder-tree branch. Additionally, it incorporates a router. Ideal for those seeking a streamlined starter kit with optimal folder structure and routing functionality.
 
 **dev:** Building upon the main branch, the dev branch represents a feature-rich version. It includes pre-configured packages and libraries essential for initiating projects. In addition to the packages from the main branch, the following are integrated and ready for use:
 
@@ -65,6 +65,9 @@ To use this starter kit, follow these steps:
    ```
 
 6. Open your browser and visit `http://localhost:4000` to see the application running.
+
+## Bug fix
+*Needs to be completed*
 
 ## Scripts
 

@@ -1,15 +1,17 @@
 import { Anchor, Button, Checkbox, Group, Paper, PasswordInput, Stack, Text, TextInput, Title } from '@mantine/core';
 import { useFormik } from 'formik';
+import { Link } from 'react-router-dom';
 
 import { Trans } from '../../components';
+import { project } from '../../configs';
 import { useTrans } from '../../hooks';
 
 const Login = () => {
     const getTrans = useTrans();
     const formik = useFormik({
         initialValues: {
-            email: 'hamid@hamid.com',
-            password: '123456',
+            email: '',
+            password: '',
             remember: false,
         },
         onSubmit: (values) => console.log(values),
@@ -98,15 +100,12 @@ const Login = () => {
                     fallback="Do not have an account yet?"
                 />
                 {' '}
-                <Anchor
-                    component="button"
-                    size="sm"
-                >
+                <Link to={`${project.route.auth.prefix}/${project.route.auth.register}`}>
                     <Trans
                         alias="auth.login.create_account"
                         fallback="Create account"
                     />
-                </Anchor>
+                </Link>
             </Text>
         </>
     );

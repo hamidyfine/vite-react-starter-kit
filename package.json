@@ -21,9 +21,11 @@
   "dependencies": {
     "@fontsource-variable/sofia-sans": "^5.0.9",
     "@mantine/core": "^7.2.2",
+    "@mantine/dates": "^7.2.2",
     "@mantine/hooks": "^7.2.2",
     "@reduxjs/toolkit": "^1.9.7",
     "@tabler/icons-react": "^2.42.0",
+    "dayjs": "^1.11.10",
     "flat": "^6.0.1",
     "formik": "^2.4.5",
     "react": "^18.2.0",
