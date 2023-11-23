@@ -26,6 +26,10 @@ export const routes: RouteObject[] = [
                         path: route.auth.register,
                         element: createElement(lazy(() => import(/*webpackChunkName: "register" */ '../views/register'))),
                     },
+                    {
+                        path: route.auth.forget,
+                        element: createElement(lazy(() => import(/*webpackChunkName: "forget-password" */ '../views/forget-password'))),
+                    },
                 ],
             },
             {

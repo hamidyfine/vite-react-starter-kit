@@ -14,17 +14,28 @@
             "title": "Start Listing your Movies!",
             "have_account": "Do you have an account?",
             "login_to_account": "Sign in to your account."
+        },
+        "forget": {
+            "title": "Recover Your Password!",
+            "remember_password": "Find your password?",
+            "login_to_account": "Sign in to your account.",
+            "enter_code": "We've send a code to the entered email. Please enter the code below."
         }
     },
     "button": {
         "login": "Sign In",
         "register": "Sign Up",
-        "logout": "Sign Out"
+        "logout": "Sign Out",
+        "set_new_password": "Set New Password",
+        "send_code": "Send Code",
+        "next": "Next"
     },
     "field": {
         "email": "Email",
         "password": "Password",
+        "confirm_password": "Confirm Password",
         "remember": "Remember Me",
+        "confirm_code": "Code",
         "first_name": "First Name",
         "last_name": "Last Name",
         "dob": "Date of Birth",
@@ -32,7 +43,7 @@
     },
     "placeholder": {
         "email": "example@domain.com",
-        "password": "Use safe one :)",
+        "password": "Use the safe one :)",
         "dob": "YYYY/MM/DD"
     }
 }

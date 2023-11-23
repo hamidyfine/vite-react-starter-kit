@@ -5,7 +5,7 @@ import { DateInput } from '@mantine/dates';
 import { useFormik } from 'formik';
 import { Link } from 'react-router-dom';
 
-import { Trans } from '../../components';
+import { FieldIcon, Trans } from '../../components';
 import { project } from '../../configs';
 import { useTrans } from '../../hooks';
 
@@ -59,6 +59,7 @@ const Register = () => {
                             required
                             id="first_name"
                             label={getTrans('field.first_name')}
+                            leftSection={<FieldIcon field="user" />}
                             name="first_name"
                             placeholder={getTrans('placeholder.first_name')}
                             type="text"
@@ -69,6 +70,7 @@ const Register = () => {
                             required
                             id="last_name"
                             label={getTrans('field.last_name')}
+                            leftSection={<FieldIcon field="user" />}
                             name="last_name"
                             placeholder={getTrans('placeholder.last_name')}
                             type="text"
@@ -104,6 +106,7 @@ const Register = () => {
                         <DateInput
                             id="dob"
                             label={getTrans('field.dob')}
+                            leftSection={<FieldIcon field="dob" />}
                             maxDate={new Date()}
                             name="dob"
                             placeholder={getTrans('placeholder.dob')}
@@ -115,6 +118,7 @@ const Register = () => {
                             required
                             id="email"
                             label={getTrans('field.email')}
+                            leftSection={<FieldIcon field="email" />}
                             name="email"
                             placeholder={getTrans('placeholder.email')}
                             type="email"
@@ -125,6 +129,7 @@ const Register = () => {
                             required
                             id="password"
                             label={getTrans('field.password')}
+                            leftSection={<FieldIcon field="password" />}
                             name="password"
                             placeholder={getTrans('placeholder.password')}
                             value={formik.values.password}

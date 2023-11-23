@@ -11,6 +11,7 @@ export const project = {
             login: 'login',
             logout: 'logout',
             register: 'register',
+            forget: 'forget-password',
         },
         dashboard: {
             prefix: '/dashboard',
@@ -27,5 +28,7 @@ export const project = {
     auth: {
         authenticated_redirect_path: '/dashboard',
         unauthenticated_redirect_path: '/auth/login',
+        has_remember_me_option: true,
+        has_recover_password_option: true,
     },
 } as const;
