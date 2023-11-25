@@ -37,6 +37,7 @@ module.exports = {
         'plugin:react/jsx-runtime',
         'plugin:react/recommended',
         'plugin:sonarjs/recommended',
+        'plugin:@tanstack/eslint-plugin-query/recommended',
         // 'jsx-a11y/recommended', // Uncomment this if you want to enable a11y linting rules
         // 'plugin:jest/recommended', // Uncomment this if you install jest
         // 'plugin:jest/style', // Uncomment this if you install jest

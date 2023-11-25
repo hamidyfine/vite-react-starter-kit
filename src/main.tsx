@@ -2,7 +2,7 @@ import '@fontsource-variable/sofia-sans';
 import '@mantine/core/styles.css';
 import './main.scss';
 
-import { MantineProvider } from '@mantine/core';
+import { MantineColorScheme, MantineProvider } from '@mantine/core';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { Provider as StoreProvider } from 'react-redux';
@@ -21,7 +21,7 @@ createRoot(root).render(
     <StrictMode>
         <StoreProvider store={store}>
             <MantineProvider
-                defaultColorScheme={project.app.theme}
+                defaultColorScheme={project.app.theme as MantineColorScheme}
                 theme={theme}
             >
                 <IntlProvider>

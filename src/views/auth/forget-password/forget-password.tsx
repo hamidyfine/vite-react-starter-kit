@@ -172,7 +172,7 @@ const ForgetPassword = () => {
                     fallback="Find your password?"
                 />
                 {' '}
-                <Link to={`${project.route.auth.prefix}/${project.route.auth.login}`}>
+                <Link to={`${project.routes.auth.prefix}/${project.routes.auth.login}`}>
                     <Trans
                         alias="auth.forget.login_to_account"
                         fallback="Sign in to your account."

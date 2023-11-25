@@ -4,7 +4,7 @@ import { IntlProvider as Provider } from 'react-intl';
 import { default_locale, locales, messages } from '../configs';
 import { intlContext } from '../context';
 
-const IntlProvider = ({ children }: PropsWithChildren<unknown>) => {
+export const IntlProvider = ({ children }: PropsWithChildren<unknown>) => {
     const [activeLocale, setActiveLocale] = useState(localStorage.getItem('locale') || default_locale);
 
     if (!localStorage.getItem('locale')) {
@@ -27,8 +27,4 @@ const IntlProvider = ({ children }: PropsWithChildren<unknown>) => {
             </Provider>
         </intlContext.Provider>
     );
-};
-
-export {
-    IntlProvider,
 };

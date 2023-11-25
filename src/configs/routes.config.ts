@@ -4,7 +4,7 @@ import { RouteObject } from 'react-router-dom';
 import * as Layout from '../layouts';
 import { project } from './project.config';
 
-const { route } = project;
+const route = project.routes;
 
 export const routes: RouteObject[] = [
     {

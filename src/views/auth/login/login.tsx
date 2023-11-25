@@ -79,7 +79,7 @@ const Login = () => {
                             )}
 
                             {project.auth.has_recover_password_option && (
-                                <Link to={`${project.route.auth.prefix}/${project.route.auth.forget}`}>
+                                <Link to={`${project.routes.auth.prefix}/${project.routes.auth.forget}`}>
                                     <Text size="sm">
                                         <Trans
                                             alias="auth.login.forget_password"
@@ -114,7 +114,7 @@ const Login = () => {
                     fallback="Do not have an account yet?"
                 />
                 {' '}
-                <Link to={`${project.route.auth.prefix}/${project.route.auth.register}`}>
+                <Link to={`${project.routes.auth.prefix}/${project.routes.auth.register}`}>
                     <Trans
                         alias="auth.login.create_account"
                         fallback="Create account"
