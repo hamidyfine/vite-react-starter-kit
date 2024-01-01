@@ -8,7 +8,7 @@ const AuthLayout = () => {
     const { is_authenticated } = useAuthenticate();
     const location = useLocation();
 
-    if (is_authenticated) {
+    if (is_authenticated && project.auth.is_auth_implemented) {
         return (
             <Navigate
                 replace

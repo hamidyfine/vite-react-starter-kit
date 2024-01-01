@@ -1,6 +1,6 @@
 import { useMutation, useQuery } from '@tanstack/react-query';
 
-import { TRequestConfig, TUseFetchArgs, TUseMutateArgs } from '../types';
+import { TRequestConfig, TResponse, TUseFetchArgs, TUseMutateArgs } from '../types';
 import { request } from '../utils';
 
 const useFetch = (args: TUseFetchArgs) => {
@@ -32,11 +32,14 @@ const useFetch = (args: TUseFetchArgs) => {
         },
     });
 
+    const response: TResponse = data as TResponse;
+
     return {
         error,
         is_loading: is_loading || false,
         refetch,
-        response: data,
+        response: response,
+        data: response?.data,
     };
 };
 

@@ -20,8 +20,21 @@ const routes = {
 };
 
 const collections = {
-    // Auth
-    refresh_token: 'user/refresh',
+    auth: {
+        refresh_token: {
+            key: 'refresh-token',
+            method: 'POST',
+            url: 'api/auth/refresh-token',
+        },
+    },
+
+    users: {
+        all: {
+            key: 'users-all',
+            method: 'GET',
+            url: 'api/users',
+        },
+    },
 };
 
 export const project = {
@@ -36,9 +49,15 @@ export const project = {
     },
 
     api: {
-        base_url: 'http://localhost:8000',
+        base_url: 'http://localhost:4000',
         use_token: true,
         use_role: true,
+        use_mock: true,
+        mock_env: 'development',
+        mock: {
+            env: 'development',
+            namespace: 'api',
+        },
         status: {
             access_token_expire: 408,
             refresh_token_expire: 407,
