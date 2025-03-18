@@ -9,7 +9,7 @@ if (!rootElement.innerHTML) {
     const root = createRoot(rootElement);
     root.render(
         <StrictMode>
-            <IntlProvider locale="en">
+            <IntlProvider>
                 <ThemeProvider>
                     <QueryProvider>
                         <RouterProvider />

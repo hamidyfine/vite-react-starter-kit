@@ -1,33 +1,34 @@
-import { i18n } from '@lingui/core';
-import { I18nProvider } from '@lingui/react';
+import '../../services/intl.service';
+
+import { locale as dayjsLocale } from 'dayjs';
 import type { PropsWithChildren } from 'react';
+import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
-// Import Catalogs
-import { messages as enMessages } from '../../locales/en/messages';
+import { locales } from '@/configs';
+import { useStoreGlobal } from '@/stores';
 
-// TODO: Import locales from config
-const locales = ['en'];
-const default_locale = 'en';
+export const IntlProvider = ({ children }: PropsWithChildren) => {
+    const { locale, setLocale } = useStoreGlobal();
+    const { i18n } = useTranslation();
 
-export const IntlProvider = ({ children, locale }: PropsWithChildren<{ locale?: string }>) => {
-    let _locale = locale ? locale : '';
-
-    if (!locale || locale === '' || !locales.includes(locale)) {
-        console.warn(`Invalid locale provided: ${locale}. Defaulting to ${default_locale}`);
-        _locale = default_locale;
+    if (!localStorage.getItem('locale')) {
+        setLocale(locales.default);
     }
 
-    // Inject Catalogs
-    i18n.load({
-        en: enMessages,
-    });
+    const updateTextDirection = (locale: string) => {
+        const locale_obj = locales.list.find((l) => l.code === locale);
+        const direction = locale_obj?.dir || 'ltr';
+        document.documentElement.setAttribute('lang', locale_obj?.code || locale);
+        document.documentElement.setAttribute('dir', direction);
+    };
 
-    // Activate Catalog
-    i18n.activate(_locale);
+    useEffect(() => {
+        localStorage.setItem('locale', locale);
+        i18n.changeLanguage(locale);
+        updateTextDirection(locale);
+        dayjsLocale(locale);
+    }, [locale]);
 
-    return (
-        <I18nProvider i18n={i18n}>
-            {children}
-        </I18nProvider>
-    );
+    return children;
 };

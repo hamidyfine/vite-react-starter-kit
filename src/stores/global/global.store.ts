@@ -1,15 +1,11 @@
 import { create } from 'zustand';
 
 interface GlobalStore {
-    bears: number;
-    increasePopulation: () => void;
-    removeAllBears: () => void;
-    updateBears: (by: number) => void;
+    locale: string;
+    setLocale: (locale: string) => void;
 }
 
 export const useStoreGlobal = create<GlobalStore>((set) => ({
-    bears: 0,
-    increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),
-    removeAllBears: () => set({ bears: 0 }),
-    updateBears: (newBears) => set({ bears: newBears }),
+    locale: import.meta.env.VITE_DEFAULT_LOCALE as string,
+    setLocale: (locale) => set({ locale }),
 }));

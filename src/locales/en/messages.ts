@@ -1,1 +1,0 @@
-/*eslint-disable*/import type{Messages}from"@lingui/core";export const messages=JSON.parse("{\"tgb\":[\"Edit <0>src/App.tsx</0> and save to test HMR\"],\"test\":[\"New Trans to test watcher!\"],\"lfHL0y\":[\"Another New Trans to test watcher!\"],\"1rg3zj\":[\"New Trans to test watcher!\"]}")as Messages;

@@ -1,4 +1,3 @@
-import { lingui } from '@lingui/vite-plugin';
 import { TanStackRouterVite } from '@tanstack/router-plugin/vite';
 import react from '@vitejs/plugin-react-swc';
 import path from 'path';
@@ -21,7 +20,7 @@ export default defineConfig({
     plugins: [
         TanStackRouterVite(),
         react({
-            plugins: [['@lingui/swc-plugin', {}]],
+            plugins: [],
         }),
         bundlesize({
             limits: [
@@ -32,7 +31,6 @@ export default defineConfig({
             ],
             stats: 'all',
         }),
-        lingui(),
     ],
     resolve: {
         alias: {
