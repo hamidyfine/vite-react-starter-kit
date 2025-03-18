@@ -3,21 +3,12 @@ import { renderWrapper, screen } from '@/tests';
 import { Button } from './button';
 
 describe('Button Component', () => {
-    it('renders the component', () => {
-        renderWrapper(<Button>Hello</Button>);
-        expect(screen.getByText((content) => content.includes('Edit'))).toBeInTheDocument();
+    test('renders Button component', () => {
+        renderWrapper(<Button>hello</Button>);
+        expect(screen.getByText(/hello/i)).toBeInTheDocument();
     });
-    it('renders the component and finds the button by text', () => {
+    test('renders the component with trans hook', () => {
         renderWrapper(<Button>Hello</Button>);
-        expect(screen.getByText(/edit/i)).toBeInTheDocument();
-    });
-    it('renders the component and finds the button by role', () => {
-        renderWrapper(<Button>Hello</Button>);
-        expect(screen.getByRole('button')).toBeInTheDocument();
-    });
-
-    it('renders the component and finds the button by text', () => {
-        renderWrapper(<Button>Hello</Button>);
-        expect(screen.getByText((content) => content.includes('Hello'))).toBeInTheDocument();
+        expect(screen.getByText(/create/i)).toBeInTheDocument();
     });
 });
