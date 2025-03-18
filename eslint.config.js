@@ -1,6 +1,3 @@
-/* eslint-disable import/default */
-/* eslint-disable import/no-named-as-default-member */
-
 // Migrate built-in rules to @stylistic/js namespace
 /* eslint @stylistic/migrate/migrate-js: "error" */
 
